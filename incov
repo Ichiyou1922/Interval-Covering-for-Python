@@ -9,11 +9,9 @@ R = 1.0 # クラスタの半径
 
 # 入力データのクリーンアップ
 for line in sys.stdin:
-	cleanline = line.strip('\n')
 	# 入力をfloat型に変換しリストに追加
-	floline = float(cleanline)
+	floline = float(line.strip())
 	unsorted_list.append(floline)
-
 sorted_list = sorted(unsorted_list)
 
 # クラスタに関する処理

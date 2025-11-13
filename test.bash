@@ -29,11 +29,11 @@ out=${cat testdata3 | ./incov}
 
 out=${echo a | ./incov}
 [ "$?" = 1 ] || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINENO"
+[ "${out}" = "None" ] || ng "$LINENO"
 
 out=$(echo  | ./incov)
 [ "$?" = 1 ] || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINENO"
+[ "${out}" = "None" ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
 
