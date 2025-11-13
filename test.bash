@@ -19,17 +19,17 @@ out=$(cat testdata1 |./incov)
 [ "$out" = 5 ] || ng "$LINENO"
 [ "$res" = 0 ] && echo OK
 
-testdata2=$(printf "-4\n-2\n-8\n-6\n0\n1\n4\n7\n3")
-out=$(echo "$testdata2" | ./incov)
+testdata2='-4\n-2\n-8\n-6\n0\n1\n4\n7\n3'
+out=$(cat testdata2 | ./incov)
 [ "$out" = 5 ] || ng "$LINENO"
 [ "$res" = 0 ] && echo OK
 
-testdata3=$(printf "3\n2\n5\n5.6\n6\n0\n1.53\n2\n5\n5.6\n6\n0\n1.5")
-out=$(echo "$testdata3" | ./incov)
+testdata3='3\n2\n5\n5.6\n6\n0\n1.53\n2\n5\n5.6\n6\n0\n1.5'
+out=$(cat testdata3 | ./incov)
 [ "$out" = 3 ] || ng "$LINENO"
 [ "$res" = 0 ] && echo OK
 
-out=$(echo あ| ./incov
+out=$(echo あ | ./incov
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
