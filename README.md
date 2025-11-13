@@ -10,7 +10,7 @@
 $ git clone git@github.com:Ichiyou1922/Interval-Covering-for-Python.git
 $ cd Interval-Covering-for-Python
 $ chmod +x incov
-$ seq 5 | ./incov #半径R=1の場合{1, 2, 3, 4, 5}は{1, 2, 3}, {4, 5}としてクラスタに包まれ，その個数は2である．
+$ seq 5 | ./incov #半径R=1の場合seq 5で生成された数値はリスト化され{1, 2, 3, 4, 5}となり{1, 2, 3}, {4, 5}としてクラスタに包まれ，その個数は2である．
 2
 ```
 
