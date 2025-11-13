@@ -11,5 +11,9 @@ for line in sys.stdin:
 	unsorted_list.append(floline)
 
 sorted_list = sorted(unsorted_list)
-print(sorted_list)
-	
+
+clusters_count = 0
+i = 0
+n = len(sorted_list)
+
+print(n)	
