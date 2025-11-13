@@ -14,8 +14,8 @@ out=$(seq 5 | ./incov)
 [ "$out" = 2 ] || ng "$LINENO"
 [ "$res" = 0 ] && echo OK
 
-testdata1=$(printf "4\n7\n9\n5\n1\n10\n13\n5\n6")
-out=$("$testdata1" |./incov) 
+testdata1='4\n7\n9\n5\n1\n10\n13\n5\n6'
+out=$(cat testdata1 |./incov) 
 [ "$out" = 5 ] || ng "$LINENO"
 [ "$res" = 0 ] && echo OK
 
