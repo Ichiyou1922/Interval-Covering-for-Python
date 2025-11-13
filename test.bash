@@ -29,7 +29,7 @@ out=$(cat testdata3 | ./incov)
 [ "$out" = 3 ] || ng "$LINENO"
 [ "$res" = 0 ] && echo OK
 
-out=$(echo あ | ./incov
+out=$(echo あ | ./incov)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
