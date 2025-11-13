@@ -18,11 +18,13 @@ sorted_list = sorted(unsorted_list)
 # クラスタに関する処理
 clusters_count = 0
 i = 0
+k = 0 
 n = len(sorted_list)
-for i in range n:	 
+while i <= n:	 
 	clrange = sorted_list[i] + 2 * R
-	for k in range n:
-		if sorted_list <= clrange:
+	k = i + 1
+	while k <= n:
+		if sorted_list[k] <= clrange:
 			k += 1
 			i = k
 		else:
