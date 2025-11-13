@@ -21,15 +21,11 @@ i = 0
 k = 0 
 n = len(sorted_list)
 while i < n:	 
+	clusters_count += 1
 	clrange = sorted_list[i] + 2.0 * R
-	k = i + 1
-	while k < n:
-		if sorted_list[k] <= clrange:
-			k += 1
-			i = k
-		else:
-			clusters_count += 1
-			break	
+	while i < n and sorted_list[i] <= clrange:
+		i += 1
+		
 print(clusters_count)
 	 
 
