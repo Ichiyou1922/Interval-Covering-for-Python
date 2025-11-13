@@ -6,8 +6,10 @@ import sys
 
 unsorted_list = []
 for line in sys.stdin:
+	# 入力をfloat型に変換しリストに追加
 	floline = float(line)
 	unsorted_list.append(floline)
 
-print(unsorted_list)
+sorted_list = sorted(unsorted_list)
+print(sorted_list)
 	
