@@ -5,7 +5,7 @@
 import sys
 
 unsorted_list = []
-R = 1 # クラスタの半径
+R = 1.0 # クラスタの半径
 
 # 入力データのクリーンアップ
 for line in sys.stdin:
@@ -20,17 +20,17 @@ clusters_count = 0
 i = 0
 k = 0 
 n = len(sorted_list)
-while i <= n:	 
-	clrange = sorted_list[i] + 2 * R
+while i < n:	 
+	clrange = sorted_list[i] + 2.0 * R
 	k = i + 1
-	while k <= n:
+	while k < n:
 		if sorted_list[k] <= clrange:
 			k += 1
 			i = k
 		else:
 			clusters_count += 1
 			break	
-print(cluster_count)
+print(clusters_count)
 	 
 
 	
