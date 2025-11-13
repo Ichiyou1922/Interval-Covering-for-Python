@@ -5,6 +5,9 @@
 import sys
 
 unsorted_list = []
+R = 1 # クラスタの半径
+
+# 入力データのクリーンアップ
 for line in sys.stdin:
 	# 入力をfloat型に変換しリストに追加
 	floline = float(line)
@@ -12,8 +15,21 @@ for line in sys.stdin:
 
 sorted_list = sorted(unsorted_list)
 
+# クラスタに関する処理
 clusters_count = 0
 i = 0
 n = len(sorted_list)
+for i in range n:	 
+	clrange = sorted_list[i] + 2 * R
+	for k in range n:
+		if sorted_list <= clrange:
+			k += 1
+			i = k
+		else:
+			clusters_count += 1
+			break	
+print(cluster_count)
+	 
 
-print(n)	
+	
+	
