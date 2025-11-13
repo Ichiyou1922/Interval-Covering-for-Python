@@ -6,6 +6,8 @@ import sys
 
 unsorted_list = []
 for line in sys.stdin:
-	unsorted_list.append(line)
+	floline = float(line)
+	unsorted_list.append(floline)
 
 print(unsorted_list)
+	
