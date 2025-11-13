@@ -3,3 +3,9 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import sys
+
+unsorted_list = []
+for line in sys.stdin:
+	unsorted_list.append(line)
+
+print(unsorted_list)
