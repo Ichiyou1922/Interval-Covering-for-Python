@@ -12,6 +12,28 @@ res=0
 ### Normal Input ###
 out=$(seq 5 | ./incov)
 [ "${out}" = 2 ] || ng "$LINENO"
+[ "${res}" = 0 ] && echo OK
+
+out=${cat testdata1 | ./incov} 
+[ "${out}" = 5 ] || ng "$LINENO"
+[ "${res}" = 0 ] && echo OK
+
+
+out=${cat testdata2 | ./incov}
+[ "${out}" = 5 ] || ng "$LINENO"
+[ "${res}" = 0 ] && echo OK
+
+out=${cat testdata3 | ./incov}
+[ "${out}" = 3 ] || ng "$LINENO"
+[ "${res}" = 0 ] && echo OK
+
+out=${echo a | ./incov}
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
+out=$(echo  | ./incov)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
 
