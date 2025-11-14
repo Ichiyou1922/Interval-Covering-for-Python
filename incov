@@ -16,12 +16,11 @@ sorted_list = sorted(unsorted_list)
 
 # クラスタに関する処理
 clusters_count = 0
-i = 0
-k = 0 
+i = 0 
 n = len(sorted_list)
 while i < n:	 
 	clusters_count += 1
-	clrange = sorted_list[i] + 2.0 * R
+	clrange = sorted_list[i] + 2.0 * R # inf[C-R, C+R]=sorted_list[i]として左の範囲で値を収められれば良い．
 	while i < n and sorted_list[i] <= clrange:
 		i += 1
 		
