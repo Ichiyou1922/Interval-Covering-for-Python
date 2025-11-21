@@ -14,7 +14,7 @@ try:
 		floline = float(line.strip())
 		unsorted_list.append(floline)
 except ValueError:
-	sys.exot(1)
+	sys.exit(1)
 
 sorted_list = sorted(unsorted_list)
 
