@@ -2,8 +2,8 @@
 ![test](https://github.com/Ichiyou1922/Interval-covering-for-Python/actions/workflows/test.yml/badge.svg)
 
 ## プログラムの内容
-- クラスタ: 中心値Cと半径Rを持ち，[C-R, C+R]の範囲の数値を収める．
-- 入力された幾つかの数値を最小個数のクラスタで包み，その個数を出力するプログラム．
+- クラスタの定義: 中心値Cと半径Rを持ち，[C-R, C+R]の範囲の数値を収めた集合．
+- 標準入力から入力された幾つかの数値を最小個数のクラスタで包み，その個数を標準出力から出力するプログラム．
 
 ## 使い方
 ```bash
