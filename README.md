@@ -48,7 +48,7 @@ $ chmod +x test.bash
   - テスト済みバージョン: 3.7~3.10
 
 ## テスト環境
-- Ubuntu 24.04.3 LTS
+- Ubuntu 24.04.3 LTS（2025/12/08|git actions|ubuntu-latest）
 - Python 3.7~3.10
 
 ## 権利について
